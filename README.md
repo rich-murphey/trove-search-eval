@@ -7,35 +7,35 @@ result can be checked in minutes rather than recomputed in hours.
 
 ## Where this stands
 
-<!-- status:begin sha=855b148 at=2026-11-17 -->
-_Written 2026-11-17 from commits through 855b148, plan documents, issues and session summaries, and the work view._
+<!-- status:begin sha=2b05400 at=2026-11-21 -->
+_Written 2026-11-21 from commits through 2b05400, plan documents, issues and session summaries, and the work view._
 
 **Next**
-1. <a id="n-d04a50"></a>Comment on https://github.com/rich-murphey/trove-search-eval/issues/1 with the k = 5 decision and close it, or say what is still unmeasured. The doc step is done: trove#227 closed with the eval-real results written to `docs/search-quality.md` in commit `689d1ee4`, and live keeps `TROVE_RRF_K=5` (memory, 2026-11-15). First action: check that the RRF k section of the doc in this repo no longer says k stays 60, then post the comment. Done when the doc matches live and issue #1 is closed or carries a comment naming what is left. The memory observations record no comment on issue #1 yet.
-2. <a id="n-de9865"></a>Open the claude-mem PR, or drop it if upstream's PR 5001 covers it. First
-   action: diff `pr/pgvector-search` (tree `~/wt/claude-mem/granite`, local only) against upstream
-   main to see what https://github.com/thedotmack/claude-mem/pull/5001 left out. If something is
-   left, fix the draft `~/wt/claude-mem/upstream-draft/pr.md` (base hash 9e4f313a8, commit count,
-   cited hashes, test counts) and push the branch to the fork. Done when the PR is open on
+1. <a id="n-de9865"></a>Open the claude-mem PR, or drop it if upstream's PR 5001 covers it. First action:
+   diff `pr/pgvector-search` (tree `~/wt/claude-mem/granite`, local only) against upstream main to
+   see what https://github.com/thedotmack/claude-mem/pull/5001 left out. If something is left, fix
+   the draft `~/wt/claude-mem/upstream-draft/pr.md` (base hash 9e4f313a8, commit count, cited
+   hashes, test counts) and push the branch to the fork. Done when the PR is open on
    thedotmack/claude-mem with release v2 linked, or you have recorded that nothing is left.
 
 **Waiting on**
 nothing
 
 **Context for the above**
-- Ruled 2026-11-15 (issue #1): Rich set `TROVE_RRF_K=5` in dv's live.env (backup `live.env.bak-20261115-rrf-k`) and restarted trove@live at about 14:06 UTC. The decision is now recorded in trove's `docs/search-quality.md` (commit `689d1ee4`, memory, 2026-11-15).
-- 2026-11-15, issue #1 (session `f6c55fcb`): live stays at k=5. On 399 prompts, served-set precision k5 − k60 was P1 −0.002 and P2 +0.005, both intervals including zero, with 139 fewer characters per prompt. This replaces the 2026-11-07 handoff, which kept k at 60. Trove#227 re-measured on trove's own fusion and closed: P2 +0.005 (CI −0.005 to +0.014), memsearch-en R@5 +0.002 (CI −0.001 to +0.006), LME store −0.003 (memory, 2026-11-15).
-- 2026-10-31, c8a3bec, ad0a139, 418c93e, issue #1: RRF k = 5 was the free win on claude-mem's
-  two-leg hybrid. The store-mode rerun against results/model-agnostic.md is not confirmed.
+- 2026-11-19, issue #1 (session `8513f3eb`): closed, citing trove#227's measurement of RRF k=5. It
+  is no longer a Next item. Rich ruled k=5 on 2026-11-15 and it is recorded in trove's
+  `docs/search-quality.md` (commit `689d1ee4`).
 - 2026-10-23: upstream merged pgvector search as PR 5001 (46 commits). 2026-10-20, 9e4f313a8:
   `pr/pgvector-search` was rebased onto it; the draft `pr.md` still cites stale hashes.
-- Memory (2026-11-06): PR 5001 is merged from head branch `pr/pgvector-core`, not `pr/pgvector-search`. rich-murphey/claude-mem#1 was closed as merged upstream with sibling PRs, and the upstream issue was never filed. No diff of what is left is recorded.
+- 2026-11-06 (memory): PR 5001 was merged from head branch `pr/pgvector-core`, not
+  `pr/pgvector-search`. rich-murphey/claude-mem#1 was closed as merged upstream with sibling PRs,
+  and the upstream issue was never filed. No diff of what is left is recorded.
 - 2026-11-06, 9f0774d: the judge-run check ran on `claude -p` (Claude Sonnet 5.5) and agreed on
   39 of 40 verdicts; rows are in `results/judge/check.tsv`. Issue #2 is closed.
 
 **Open questions**
 - <a id="n-601958"></a>Does upstream's merged pgvector search (claude-mem PR 5001) leave anything
-  for the PR in Next 2? Stage: open since 2026-11-06. No recommendation recorded.
+  for the PR in Next 1? Stage: open since 2026-11-06. No recommendation recorded.
 - <a id="n-c7ce65"></a>Should a person also read the 40 check rows in `results/judge/check.tsv`,
   since a second model and not a human did the check? Stage: asked 2026-11-06. No
   recommendation recorded.
@@ -43,6 +43,7 @@ nothing
   rule, and the last session set v4 back to Latest only for that reason. Stage: open since
   2026-11-05. No recommendation recorded.
 <!-- status:end -->
+
 
 
 
