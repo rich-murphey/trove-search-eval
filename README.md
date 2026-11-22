@@ -7,8 +7,10 @@ result can be checked in minutes rather than recomputed in hours.
 
 ## Where this stands
 
-<!-- status:begin sha=2b05400 at=2026-11-21 -->
-_Written 2026-11-21 from commits through 2b05400, plan documents, issues and session summaries, and the work view._
+<!-- status:begin sha=c74da35 at=2026-11-22 -->
+_Written 2026-11-22 from commits through c74da35, plan documents, issues and session summaries, and the work view._
+
+_Written 2026-11-22 from commits through 2b05400, plan documents, issues and session summaries, and the work view._
 
 **Next**
 1. <a id="n-de9865"></a>Open the claude-mem PR, or drop it if upstream's PR 5001 covers it. First action:
@@ -22,9 +24,9 @@ _Written 2026-11-21 from commits through 2b05400, plan documents, issues and ses
 nothing
 
 **Context for the above**
-- 2026-11-19, issue #1 (session `8513f3eb`): closed, citing trove#227's measurement of RRF k=5. It
-  is no longer a Next item. Rich ruled k=5 on 2026-11-15 and it is recorded in trove's
-  `docs/search-quality.md` (commit `689d1ee4`).
+- 2026-11-15, issue #1: Rich ruled RRF k=5 and set `TROVE_RRF_K=5` in trove's live.env, then
+  restarted trove@live. Recorded in trove's `docs/search-quality.md` (commit `689d1ee4`). The gain
+  was measured on claude-mem's two-leg hybrid, not yet on trove. Issue #1 closed 2026-11-19.
 - 2026-10-23: upstream merged pgvector search as PR 5001 (46 commits). 2026-10-20, 9e4f313a8:
   `pr/pgvector-search` was rebased onto it; the draft `pr.md` still cites stale hashes.
 - 2026-11-06 (memory): PR 5001 was merged from head branch `pr/pgvector-core`, not
@@ -43,24 +45,6 @@ nothing
   rule, and the last session set v4 back to Latest only for that reason. Stage: open since
   2026-11-05. No recommendation recorded.
 <!-- status:end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 The first question it answers is which embedding model claude-mem should use.
 all-MiniLM-L6-v2, the default, is English-only;
