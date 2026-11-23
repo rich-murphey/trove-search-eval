@@ -7,10 +7,8 @@ result can be checked in minutes rather than recomputed in hours.
 
 ## Where this stands
 
-<!-- status:begin sha=c74da35 at=2026-11-22 -->
-_Written 2026-11-22 from commits through c74da35, plan documents, issues and session summaries, and the work view._
-
-_Written 2026-11-22 from commits through 2b05400, plan documents, issues and session summaries, and the work view._
+<!-- status:begin sha=26d9568 at=2026-11-23 -->
+_Written 2026-11-23 from commits through 26d9568, plan documents, issues and session summaries, and the work view._
 
 **Next**
 1. <a id="n-de9865"></a>Open the claude-mem PR, or drop it if upstream's PR 5001 covers it. First action:
@@ -25,13 +23,16 @@ nothing
 
 **Context for the above**
 - 2026-11-15, issue #1: Rich ruled RRF k=5 and set `TROVE_RRF_K=5` in trove's live.env, then
-  restarted trove@live. Recorded in trove's `docs/search-quality.md` (commit `689d1ee4`). The gain
-  was measured on claude-mem's two-leg hybrid, not yet on trove. Issue #1 closed 2026-11-19.
+  restarted trove@live. Recorded in `docs/search-quality.md` (commit `689d1ee4`). The issue was
+  closed 2026-11-19, citing a measurement in trove#227.
 - 2026-10-23: upstream merged pgvector search as PR 5001 (46 commits). 2026-10-20, 9e4f313a8:
   `pr/pgvector-search` was rebased onto it; the draft `pr.md` still cites stale hashes.
 - 2026-11-06 (memory): PR 5001 was merged from head branch `pr/pgvector-core`, not
   `pr/pgvector-search`. rich-murphey/claude-mem#1 was closed as merged upstream with sibling PRs,
   and the upstream issue was never filed. No diff of what is left is recorded.
+- (memory, 2026-11-03): after the worktree cleanup, `pr/pgvector-search` was the only claude-mem
+  branch left, with no PR opened. Memory lists it under the `pgvector-upstream` worktree, not
+  `granite`, so check which tree holds it before diffing.
 - 2026-11-06, 9f0774d: the judge-run check ran on `claude -p` (Claude Sonnet 5.5) and agreed on
   39 of 40 verdicts; rows are in `results/judge/check.tsv`. Issue #2 is closed.
 
