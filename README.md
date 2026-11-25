@@ -7,8 +7,8 @@ result can be checked in minutes rather than recomputed in hours.
 
 ## Where this stands
 
-<!-- status:begin sha=fb426c3 at=2026-11-24 -->
-_Written 2026-11-24 from commits through fb426c3, plan documents, issues and session summaries, and the work view._
+<!-- status:begin sha=fefdab6 at=2026-11-25 -->
+_Written 2026-11-25 from commits through fefdab6, plan documents, issues and session summaries, and the work view._
 
 **Next**
 1. <a id="n-de9865"></a>Open the claude-mem PR, or drop it if upstream's PR 5001 covers it. First
@@ -31,12 +31,11 @@ nothing
 - 2026-11-06 (memory): PR 5001 was merged from head branch `pr/pgvector-core`, not
   `pr/pgvector-search`. rich-murphey/claude-mem#1 was closed as merged upstream with sibling PRs,
   and the upstream issue was never filed. No diff of what is left is recorded.
-- 2026-11-03 (memory): after the worktree cleanup, `pr/pgvector-search` was the only claude-mem
-  branch left, with no PR opened. Memory from 2026-10-20 shows its tip a759f030a checked out in the
-  `granite` worktree, so Next 1 names the right tree. The `pgvector-upstream` worktree
-  (`~/wt/claude-mem/pgvector-upstream`) sits on c8b2b3c1c, which descends from it with three extra
-  commits (onnxruntime-node pin, a docs fix, per-prompt semantic injection); a diff from that tree
-  would include them.
+- 2026-11-03 (memory): `pr/pgvector-search` was the only claude-mem branch left, with no PR opened;
+  its tip a759f030a is checked out in the `granite` worktree, so Next 1 names the right tree. The
+  `pgvector-upstream` worktree (`~/wt/claude-mem/pgvector-upstream`) sits on c8b2b3c1c, which
+  descends from it with three extra commits (onnxruntime-node pin, a docs fix, per-prompt semantic
+  injection); a diff from that tree would include them.
 - 2026-11-06, 9f0774d: the judge-run check ran on `claude -p` (Claude Sonnet 5.5) and agreed on
   39 of 40 verdicts; rows are in `results/judge/check.tsv`. Issue #2 is closed.
 
