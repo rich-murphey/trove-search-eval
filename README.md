@@ -7,8 +7,8 @@ result can be checked in minutes rather than recomputed in hours.
 
 ## Where this stands
 
-<!-- status:begin sha=fefdab6 at=2026-11-25 -->
-_Written 2026-11-25 from commits through fefdab6, plan documents, issues and session summaries, and the work view._
+<!-- status:begin sha=1ef53ec at=2026-11-26 -->
+_Written 2026-11-26 from commits through 1ef53ec, plan documents, issues and session summaries, and the work view._
 
 **Next**
 1. <a id="n-de9865"></a>Open the claude-mem PR, or drop it if upstream's PR 5001 covers it. First
@@ -17,25 +17,24 @@ _Written 2026-11-25 from commits through fefdab6, plan documents, issues and ses
    left, fix the draft `~/wt/claude-mem/upstream-draft/pr.md` (base hash 9e4f313a8, commit count,
    cited hashes, test counts) and push the branch to the fork. Done when the PR is open on
    thedotmack/claude-mem with release v2 linked, or you have recorded that nothing is left.
+   underway in docs/test (dv, `/home/rich/wt/docs/test`)
 
 **Waiting on**
 nothing
 
 **Context for the above**
-- 2026-11-15, issue #1 (https://github.com/rich-murphey/trove-search-eval/issues/1): Rich ruled RRF
-  k=5 and set `TROVE_RRF_K=5` in trove's live.env, then restarted trove@live. Recorded in
-  `docs/search-quality.md` (commit `689d1ee4`). The issue was closed 2026-11-19, citing a
-  measurement in trove#227.
+- 2026-11-15, issue #1 (https://github.com/rich-murphey/trove-search-eval/issues/1): ruled
+  2026-11-15, `TROVE_RRF_K=5` in trove's live.env. Recorded in `docs/search-quality.md`
+  (commit `689d1ee4`). The issue was closed 2026-11-19, citing a measurement in trove#227.
 - 2026-10-23: upstream merged pgvector search as PR 5001 (46 commits). 2026-10-20, 9e4f313a8:
   `pr/pgvector-search` was rebased onto it; the draft `pr.md` still cites stale hashes.
 - 2026-11-06 (memory): PR 5001 was merged from head branch `pr/pgvector-core`, not
   `pr/pgvector-search`. rich-murphey/claude-mem#1 was closed as merged upstream with sibling PRs,
   and the upstream issue was never filed. No diff of what is left is recorded.
-- 2026-11-03 (memory): `pr/pgvector-search` was the only claude-mem branch left, with no PR opened;
-  its tip a759f030a is checked out in the `granite` worktree, so Next 1 names the right tree. The
-  `pgvector-upstream` worktree (`~/wt/claude-mem/pgvector-upstream`) sits on c8b2b3c1c, which
-  descends from it with three extra commits (onnxruntime-node pin, a docs fix, per-prompt semantic
-  injection); a diff from that tree would include them.
+- 2026-11-03 (memory), a759f030a: `pr/pgvector-search` was the only claude-mem branch left, with
+  no PR opened; this tip is checked out in the `granite` worktree. The `pgvector-upstream` worktree
+  (`~/wt/claude-mem/pgvector-upstream`) is on c8b2b3c1c, which descends from it with three extra
+  commits (onnxruntime-node pin, docs fix, per-prompt semantic injection); do not diff from there.
 - 2026-11-06, 9f0774d: the judge-run check ran on `claude -p` (Claude Sonnet 5.5) and agreed on
   39 of 40 verdicts; rows are in `results/judge/check.tsv`. Issue #2 is closed.
 
