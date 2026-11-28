@@ -7,22 +7,21 @@ result can be checked in minutes rather than recomputed in hours.
 
 ## Where this stands
 
-<!-- status:begin sha=1ef53ec at=2026-11-26 -->
-_Written 2026-11-26 from commits through 1ef53ec, plan documents, issues and session summaries, and the work view._
+<!-- status:begin sha=661eebe at=2026-11-28 -->
+_Written 2026-11-28 from commits through 661eebe, plan documents, issues and session summaries, and the work view._
 
 **Next**
-1. <a id="n-de9865"></a>Open the claude-mem PR, or drop it if upstream's PR 5001 covers it. First
-   action: diff `pr/pgvector-search` (tree `~/wt/claude-mem/granite`, local only) against upstream
-   main to see what https://github.com/thedotmack/claude-mem/pull/5001 left out. If something is
-   left, fix the draft `~/wt/claude-mem/upstream-draft/pr.md` (base hash 9e4f313a8, commit count,
-   cited hashes, test counts) and push the branch to the fork. Done when the PR is open on
-   thedotmack/claude-mem with release v2 linked, or you have recorded that nothing is left.
-   underway in docs/test (dv, `/home/rich/wt/docs/test`)
+nothing
 
 **Waiting on**
 nothing
 
 **Context for the above**
+- A ruling recorded through trove's rule tool from the docket in a docs/ui session (decision
+  `b2695f15-b0c8-496e-8822-85b7be251185`) drops the claude-mem pgvector PR: open no PR, because
+  upstream merged its own pgvector search in PR 5001 and trove replaced claude-mem. It removes
+  the former Next 1 and answers the question of whether PR 5001 left anything for that PR
+  (memory, 2026-11-27).
 - 2026-11-15, issue #1 (https://github.com/rich-murphey/trove-search-eval/issues/1): ruled
   2026-11-15, `TROVE_RRF_K=5` in trove's live.env. Recorded in `docs/search-quality.md`
   (commit `689d1ee4`). The issue was closed 2026-11-19, citing a measurement in trove#227.
@@ -39,8 +38,6 @@ nothing
   39 of 40 verdicts; rows are in `results/judge/check.tsv`. Issue #2 is closed.
 
 **Open questions**
-- <a id="n-601958"></a>Does upstream's merged pgvector search (claude-mem PR 5001) leave anything
-  for the PR in Next 1? Stage: open since 2026-11-06. No recommendation recorded.
 - <a id="n-c7ce65"></a>Should a person also read the 40 check rows in `results/judge/check.tsv`,
   since a second model and not a human did the check? Stage: asked 2026-11-06. No
   recommendation recorded.
